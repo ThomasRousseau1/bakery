@@ -1,0 +1,38 @@
+.footer {
+    padding: 2rem;
+    &__logo {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        background-color: $colour-primary;
+    }
+    &__infos {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__icons {
+        text-align: right;
+        & i {
+            transition: 300ms;
+            font-size: 2rem;
+            color: $colour-tertiary;
+            margin: 0 0.5rem 0 0.5rem;
+            &:hover {
+                color: $colour-primary;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer {
+        margin-top: 2rem;
+        &__icons {
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+}

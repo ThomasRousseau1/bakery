@@ -1,0 +1,462 @@
+//BANNER
+.banner {
+    background: url("../../ressources/images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 23rem;
+    color: #fff;
+    padding: 5rem;
+    &__title {
+        margin-top: 0;
+    }
+}
+
+//EXAMPLES
+.examples {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 5rem 0 5rem 0;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2.5rem 0 2.5rem;
+        overflow: hidden;
+    }
+    &__img {
+        width: 380px;
+        height: 380px;
+        object-fit: cover;
+        transition: 300ms ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    .cta {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+//QUOTE
+.quote {
+    display: flex;
+    margin-bottom: 5rem;
+    padding: 5rem 5rem 0 5rem;
+    justify-content: space-evenly;
+    &__title {
+        color: $colour-primary;
+        font-size: 3rem;
+    }
+    & hr {
+        margin: 0;
+        color: $colour-tertiary;
+    }
+    &__text {
+        width: 50%;
+    }
+}
+
+//ORDER
+.order {
+    &__banner {
+        background: url("../../ressources/images/seongho-jang-v3cQex9UX7A-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 23rem;
+        text-align: center;
+        margin: 5rem 0 5rem 0;
+        &--title {
+            color: #fff;
+            padding-top: 7rem;
+        }
+    }
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        margin: 0 auto;
+        & p {
+            text-align: justify;
+            margin-bottom: 3rem;
+        }
+    }
+//ORDER SELECTION
+    &__selection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 0 5rem 0;
+        &--container {
+            display: flex;
+            padding: 0 5rem 0 5rem;
+        }
+        .order__selection--img {
+            padding: 3rem;
+        }
+        .order__selection--img:nth-child(2) {
+            padding: 3rem 1rem 3rem 1rem;
+            border-left: 2px solid $colour-tertiary;
+            border-right: 2px solid $colour-tertiary;
+        }
+    }
+}
+
+//GIFTS
+.gifts {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $colour-primary;
+    color: $colour-secondary;
+    padding: 3rem 0 5rem 0;
+    &__subtitle {
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+    &__container--top {
+        display: flex;
+        flex-direction: row;
+        .gifts__infos {
+            width: 15rem;
+            padding: 0 2rem 0 2rem;
+            text-align: left;
+        }
+    }
+    &__container--bottom {
+        display: flex;
+        flex-direction: row;
+        .gifts__infos {
+            width: 15rem;
+            padding: 0 2rem 0 2rem;
+            text-align: left;
+        }
+    }
+    .cta {
+        margin-top: 5rem;
+    }
+}
+
+//PRODUITS 
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid $colour-tertiary;
+    margin: 2rem;
+    padding:  0 2rem 0 2rem;
+    &__buttons {
+        text-align: center;
+    }
+    & h2 {
+        text-align: center;
+        color: $colour-primary;
+    }
+    &__type {
+        .products__container {
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        padding-bottom: 2rem;
+        .products__box {
+            padding: 0 1rem 0 1rem;
+            text-align: center;
+            min-height: 20rem;
+        }
+        .cta {
+            margin-top: 2rem;
+        }
+    }
+}
+
+//CONTACT
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0 5rem 0;
+    background-color: $colour-primary;
+    color: $colour-secondary;
+    padding: 2rem 0 2rem 0;
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .contact__infos {
+            width: 15rem;
+            padding: 0 1rem 0 1rem;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-top: 3rem;
+        & input {
+            margin-bottom: 1rem;
+            height: 2rem;
+        }
+        & textarea {
+            height: 10rem;
+            margin-bottom: 2rem;
+        }
+    }
+    & button {
+        margin-bottom: 3rem;
+    }
+    &__notes {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+//RESPONSIVE
+@media screen and (max-width: 1475px) {
+    .examples {
+        margin: 2rem 0 2rem 0;
+        &__container {
+            padding: 0 1rem 0 1rem;
+            width: 25%;
+            height: 20rem;
+            .examples__img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .quote {
+        &__text {
+            margin-left: 1rem;
+        }
+    }
+    .order__selection--container {
+        flex-direction: column;
+        align-items: center;
+        .order__selection--img {
+            padding: 3rem 0 3rem 0;
+            & img {
+                height: 40rem;
+                width: 40rem;
+                object-fit: cover;
+            }
+            &:nth-child(2) {
+                border: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .examples {
+        justify-content: space-evenly;
+        &__container {
+            height: 15rem;
+            width: 30%;
+            padding: 0;
+            .cta {
+                padding: 1rem 2rem 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    }
+    .gifts {
+        &__container--top, &__container--bottom {
+            flex-direction: column;
+            align-items: center;
+            .gifts__infos {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        padding: 2rem 0 0 0;
+        text-align: center;
+        &__title {
+            font-size: 35px;
+            margin: 1rem 0 5rem 0;
+        }
+    }
+    .examples {
+        flex-direction: column;
+        align-items: center;
+        &__container {
+            height: 15rem;
+            width: 80%;
+            padding: 2rem 0 2rem 0;
+            .cta {
+                padding: 1rem 2rem 1rem 2rem;
+                font-size: 1rem;
+                position: relative;
+                bottom: 4rem;
+            }
+        }
+    }
+    .quote {
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            font-size: 35px;
+        }
+        &__text {
+            width: 100%;
+        }
+        & hr {
+            visibility: hidden;
+            display: none;
+        }
+    }
+    .order {
+        //PARTIE BANNER
+        &__banner--title {
+            font-size: 35px;
+        }
+        .order__infos {
+            & h2 {
+                font-size: 35px;
+            }
+        }
+        //PARTIE SELECTION 
+        .order__selection--img {
+            & img {
+                height: 20rem;
+                width: 20rem;
+            }
+        }
+        .cta {
+            padding: 1rem 2rem 1rem 2rem;
+            font-size: 1rem;
+        }
+    }
+    .gifts {
+        &__title {
+            font-size: 35px;
+        }
+        &__subtitle {
+            width: 70%;
+            text-align: left;
+        }
+        &__container--top, &__container--bottom {
+            width: 70%;
+            .gifts__infos {
+                text-align: justify;
+            }
+        }
+    }
+    .products {
+        & h2 {
+            font-size: 35px;
+        }
+    }
+    .contact {
+        &__title {
+            font-size: 35px;
+        }
+        &__container {
+            flex-direction: column;
+            width: 80%;
+            align-items: center;
+            .contact__infos {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        &__form {
+            width: 80%;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .banner {
+        padding: 2rem 0 2rem 2rem;
+        margin-right: 0;
+        text-align: left;
+        height: 15rem;
+        background-size: 100% 100%;
+        &__title {
+            font-size: 25px;
+            margin-bottom: 4rem;
+            margin-right: 0;
+            padding-top: 1rem;
+        }
+    }
+    .examples {
+        &__container {
+            height: 15rem;
+            padding: 1rem 2rem 1rem 2rem;
+        }
+    }
+    .quote {
+        padding: 2rem 4rem 2rem 4rem;
+        text-align: justify;
+        &__title {
+            font-size: 25px;
+        }
+        &__text {
+            margin-left: 0;
+        }
+    }
+    .order {
+        &__banner {
+            height: 20rem;
+            background-size: 100% 20rem;
+            padding: 1rem;
+            &--title {
+                padding-top: 0;
+                margin-bottom: 3rem;
+                font-size: 25px;
+            }
+        }
+        .cta {
+            padding: 0.8rem 2rem 0.8rem 2rem;
+        }
+        &__selection {
+            & h2 {
+                font-size: 25px;
+                margin-bottom: 0;
+            }
+            &--container {
+                padding: 0;
+            }
+        }
+    }
+    .products {
+        padding: 0;
+        margin: 0;
+        .cta-products {
+            width: 100%;
+            border-right: none;
+            border-left: none;
+            border-bottom: none;
+            margin: 0;
+            &:hover {
+                background-color: $colour-primary;
+                color: $colour-secondary;
+            }
+        }
+        .cta-products:last-child {
+            border-bottom: 2px solid $colour-tertiary;
+        }                
+        .products__box {
+            padding: 0 3rem 0 3rem;
+        }
+    }
+    .contact {
+       margin: 0;
+        &__title {
+            text-align: center;
+        }
+    }
+}
